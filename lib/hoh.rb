@@ -21,19 +21,37 @@
 # PORTION_3 = {
 #   label: "Family",
 #   sub_category: {
-     label: "Genus",
-   }
- }
+#     label: "Genus",
+#   }
+# }
  
- PORTION_4 = {
-   label: "Species",
-   sub_category: nil
- }
+ #PORTION_4 = {
+  # label: "Species",
+   #sub_category: nil
+# }
 
 def naming_system
-  PORTION_3[:sub_category][:sub_category] = PORTION_4
-  PORTION_2[:sub_category] = PORTION_3
-  PORTION_1[:sub_category][:sub_category][:sub_category]
+  {
+    label: "Kingdom",
+    sub_category:{
+      label: "Phylum",
+      sub_category:{
+        label: "Class",
+        sub_category:{
+          label: "Order",
+          sub_category:{
+            label: "Family",
+            sub_category:{
+              label: "Genus",
+              sub_category:{
+                label: "Species",
+                sub_category: nil
+            }
+          }
+        }
+      }
+    }
+  }
   # Remember:
   #  Kingdom
   #  Phylum
